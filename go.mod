@@ -1,3 +1,3 @@
-module github.com/mehrdadnekopour/goo-tools
+module github.com/mehrdadnekopour/go-tools
 
 go 1.13
