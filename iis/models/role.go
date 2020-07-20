@@ -79,6 +79,8 @@ const (
 	RoleInspectorSale RolesEnum = 901
 	// RoleInspectorAfterSale ...
 	RoleInspectorAfterSale RolesEnum = 902
+	// RoleAPICall ...
+	RoleAPICall RolesEnum = 1000
 )
 
 // Title ...
@@ -108,7 +110,8 @@ func (r RolesEnum) Title() string {
 		return "inspector"
 	case RoleInspectorAfterSale:
 		return "inspector"
-
+	case RoleAPICall:
+		return "api"
 	}
 
 	return ""
