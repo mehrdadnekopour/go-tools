@@ -1,3 +1,3 @@
 # README
 
-# go-tools - v1.0.3
+# go-tools - v1.0.6
