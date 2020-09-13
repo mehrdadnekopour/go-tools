@@ -69,10 +69,10 @@ const (
 	RoleCompanySale RolesEnum = 501
 	// RoleCompanyAfterSale ...
 	RoleCompanyAfterSale RolesEnum = 502
-	// RoleCompanyIndustrialMachinraies ...
-	RoleCompanyIndustrialMachinraies RolesEnum = 503
-	// RoleCompanyMotorCycles ...
-	RoleCompanyMotorCycles RolesEnum = 504
+	// RoleCompanyHeavyMachinary ...
+	RoleCompanyHeavyMachinary RolesEnum = 503
+	// RoleCompanyMotorCycle ...
+	RoleCompanyMotorCycle RolesEnum = 504
 	// RoleRegionalOffice ...
 	RoleRegionalOffice RolesEnum = 600
 	// RoleAgency ...
@@ -104,9 +104,9 @@ func (r RolesEnum) Title() string {
 		return "company"
 	case RoleCompanyAfterSale:
 		return "company"
-	case RoleCompanyIndustrialMachinraies:
+	case RoleCompanyHeavyMachinary:
 		return "company"
-	case RoleCompanyMotorCycles:
+	case RoleCompanyMotorCycle:
 		return "company"
 	case RoleRegionalOffice:
 		return "regional_office"
