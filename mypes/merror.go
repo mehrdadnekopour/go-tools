@@ -108,6 +108,7 @@ func (m *Merror) SetAccessDeniedError() {
 	m.Problem = true
 	m.Data = errors.New("access denied")
 	m.Code = HTTPForbidden
+	m.HTTPStatus = m.GetHTTPStatus()
 }
 
 // GetMessage ...
