@@ -103,6 +103,13 @@ func (m *Merror) SetInvalidQueryParamMrror() {
 	m.HTTPStatus = m.GetHTTPStatus()
 }
 
+// SetAccessDeniedError ...
+func (m *Merror) SetAccessDeniedError() {
+	m.Problem = true
+	m.Data = errors.New("access denied")
+	m.Code = HTTPForbidden
+}
+
 // GetMessage ...
 func (m *Merror) GetMessage() (msg string) {
 
