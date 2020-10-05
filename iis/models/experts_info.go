@@ -8,7 +8,7 @@ type ExpertsInfo struct {
 
 // EmployeeJobTitle ...
 type EmployeeJobTitle struct {
-	JobTitles  int    `json:"job_titles""`
+	JobTitles  int    `json:"job_titles"`
 	NationalID string `json:"national_id"`
 }
 

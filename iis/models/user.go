@@ -10,7 +10,7 @@ import (
 type User struct {
 	mypes.Model
 	Title     string        `json:"title"`
-	Username  string        `json:"username" validate:"required"`
+	Username  string        `json:"username" validate:"required" gorm:"unique"`
 	Password  string        `json:"password" validate:"required"`
 	OwnerType UserOwnerType `json:"owner_type"`
 	OwnerID   int           `json:"owner_id"`
