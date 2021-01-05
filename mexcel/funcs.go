@@ -9,6 +9,25 @@ import (
 	"github.com/mehrdadnekopour/go-tools/mypes"
 )
 
+// CreateXLSX ...
+func CreateXLSX(path, fileName, defaultSheet string) (xlsx *ExcelFile, merr mypes.Merror) {
+	f := excelize.NewFile()
+	// Create a new sheet.
+	f.NewSheet(defaultSheet)
+
+	if err := f.SaveAs(fileName); err != nil {
+		merr.Set(true, err, mypes.HTTPInternalServerError)
+		return
+	}
+
+	xlsx = &ExcelFile{
+		File: f,
+		Path: fmt.Sprintf("%1/%2", path, fileName),
+	}
+
+	return
+}
+
 // OpenFile ...
 func OpenFile(path string) (xlsx *ExcelFile, merr mypes.Merror) {
 
