@@ -20,9 +20,10 @@ func CreateXLSX(path, fileName, defaultSheet string) (xlsx *ExcelFile, merr mype
 		return
 	}
 
+	fullPath := fmt.Sprintf("%s/%s", path, fileName)
 	xlsx = &ExcelFile{
 		File: f,
-		Path: fmt.Sprintf("%1/%2", path, fileName),
+		Path: fullPath,
 	}
 
 	return
