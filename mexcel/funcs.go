@@ -15,12 +15,12 @@ func CreateXLSX(path, fileName, defaultSheet string) (xlsx *ExcelFile, merr mype
 	// Create a new sheet.
 	f.NewSheet(defaultSheet)
 
-	if err := f.SaveAs(fileName); err != nil {
+	fullPath := fmt.Sprintf("%s/%s", path, fileName)
+	if err := f.SaveAs(fullPath); err != nil {
 		merr.Set(true, err, mypes.HTTPInternalServerError)
 		return
 	}
 
-	fullPath := fmt.Sprintf("%s/%s", path, fileName)
 	xlsx = &ExcelFile{
 		File: f,
 		Path: fullPath,
