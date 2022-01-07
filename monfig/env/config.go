@@ -31,8 +31,9 @@ func (v *viperConfig) Init() {
 	viper.SetConfigType(`json`)
 	viper.SetConfigName("config")
 	viper.AddConfigPath(basePath)
+	//added current folder path too
 	viper.AddConfigPath(".")
-	
+
 	err := viper.ReadInConfig()
 
 	if err != nil {
